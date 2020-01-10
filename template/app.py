@@ -29,7 +29,7 @@ def download():
         conn= sqlite3.connect("DataBase.db")
         cursor = conn.cursor()
         print("IN DATABASE FUNCTION ")
-        c = cursor.execute(""" SELECT * FROM  my_table """)
+        c = cursor.execute(""" SELECT * FROM  tablom """)
 
         for x in c.fetchall():
             name_v=x[0]
@@ -57,8 +57,8 @@ def database(name, data):
     conn= sqlite3.connect("DataBase.db")
     cursor = conn.cursor()
 
-    cursor.execute("""CREATE TABLE IF NOT EXISTS my_table (name TEXT,data BLOP) """)
-    cursor.execute("""INSERT INTO my_table (name, data) VALUES (?,?) """,(name,data))
+    cursor.execute("""CREATE TABLE IF NOT EXISTS tablom (name TEXT,data BLOP) """)
+    cursor.execute("""INSERT INTO tablom (name, data) VALUES (?,?) """,(name,data))
 
     conn.commit()
     cursor.close()
@@ -70,7 +70,7 @@ def query():
         conn= sqlite3.connect("DataBase.db")
         cursor = conn.cursor()
         print("IN DATABASE FUNCTION ")
-        c = cursor.execute(""" SELECT * FROM  my_table """)
+        c = cursor.execute(""" SELECT * FROM  tablom """)
 
         for x in c.fetchall():
             name_v=x[0]

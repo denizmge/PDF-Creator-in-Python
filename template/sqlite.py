@@ -5,7 +5,7 @@ def query():
         conn= sqlite3.connect("DataBase.db")
         cursor = conn.cursor()
 
-        c = cursor.execute(""" SELECT * FROM  my_table """)
+        c = cursor.execute(""" SELECT * FROM  tablom """)
 
         for x in c.fetchall():
             name_v=x[0]
