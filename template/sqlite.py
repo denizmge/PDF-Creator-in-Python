@@ -17,5 +17,5 @@ def query():
         cursor.close()
         conn.close()
 
-print("ran1")
-query("ran1")
+print()
+query()
